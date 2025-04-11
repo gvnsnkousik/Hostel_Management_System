@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgb(31, 185, 232),rgb(133, 35, 246), rgb(195, 0, 255)), url('background_image.jpg');
+    background-size: cover;
+    background-blend-mode: screen;
+    display: flex;
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background: rgba(255, 253, 253,0.3);
+    border-radius: 0.625rem;
+}
+
+.login-container h2 {
+    margin: 0 0 1.875rem;
+    padding: 0;
+    color: #000000;
+    text-align: center;
+}
+
+.login-container .input-group {
+    position: relative;
+}
+
+.login-container .input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: #000000;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #000000;
+}
+
+.login-container .input-group input {
+    width: 100%;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: #000000;
+    letter-spacing: 0.062rem;
+    margin-bottom: 1.875rem;
+    border: none;
+    border-bottom: 0.065rem solid #fff9f9;
+    outline: none;
+    background: rgba(255, 253, 253,0);
+}
+.login-container .input-group i {
+    position: absolute;
+    top: 45%;
+    right: 0.625rem; /* Right padding for icon */
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.login-container .input-group input:focus ~ label,
+.login-container .input-group input:valid ~ label,
+.login-container .input-group input:not([value=""]) ~ label {
+    top: -1.125rem;
+    left: 0;
+    color: #000000;
+    font-size: 0.75rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-image:linear-gradient(to left,cyan,rgb(168, 64, 242),violet);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    transition: 0.7s;
+}
+
+button:active {
+    transform: translateZ(5px);
+}

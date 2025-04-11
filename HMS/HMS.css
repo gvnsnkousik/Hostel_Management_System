@@ -1,0 +1,79 @@
+/* Global styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image: linear-gradient(to right, rgb(6, 8, 147),rgb(29, 175, 237));
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 2px;
+}
+h2{
+  color: white;
+}
+
+/* Form styles */
+.form-container {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.1);
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  background: transparent;
+}
+
+select {
+  width: 97%;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #29d32f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+  transition: transform 0.7s;
+}
+button:active{
+  transform: translateZ(8px);
+  transition: 0.7s;
+}

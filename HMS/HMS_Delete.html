@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="HMS.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hostel Management System</h1>
+        <div class="form-container">
+            <h2>Existing Resident Details</h2>
+            <form method="post" action="HMS_Delete.php">
+                <label for="ID">Enter Resident ID:</label>
+                <input type="text" id="ID" name="ID" required>
+                <button type="button" onclick="window.open('HMS_Main.html', '_self');" style="display:block;margin-top:40px">Back</button><br>
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

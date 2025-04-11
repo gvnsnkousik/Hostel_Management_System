@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="HMS.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hostel Management System</h1>
+        <div class="form-container">
+            <h2>Existing Resident Details</h2>
+            <form method="post" action="HMS_Search.php">
+                <label for="ID">Enter Resident ID:</label>
+                <input type="number" id="ID" name="ID" style="margin-bottom:10px" required>
+
+                <button type="button" onclick="window.open('HMS_Main.html', '_self');">Back</button>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

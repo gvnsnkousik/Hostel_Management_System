@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="HMS.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hostel Management System</h1>
+        <div class="form-container">
+            <h2>New Resident Details</h2>
+            <form method="post" action="HMS_Resident.php" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="Name">Name:</label>
+                    <input type="text" id="Name" name="Name" required>
+
+                    <label for="DOB">Date of Birth:</label>
+                    <input type="date" id="DOB" name="DOB" oninput="return calculateAge()" required>
+                    <small id="dobError" style="color: red;"></small>
+
+                    <label for="Age">Age:</label>
+                    <input type="number" id="Age" name="Age" required readonly>
+
+                    <label for="Gender">Gender:</label>
+                    <select id="Gender" name="Gender" required>
+                        <option value="">-- Select Gender --</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="O">Others</option>
+                    </select>
+
+                    <label for="Contact_Number">Contact Number:</label>
+                    <input type="tel" id="Contact_Number" name="Contact_Number" pattern="[0-9]{10}" required>
+                    <small id="contactError" style="color: red;"></small>
+
+                    <label for="Email_ID">Email-ID (Optional):</label>
+                    <input type="email" id="Email_ID" name="Email_ID">
+                </div>
+                <button type="button" onclick="window.open('HMS_Main.html', '_self');">Back</button>
+                <button type="submit">Next</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function calculateAge() {
+            var dobInput = document.getElementById("DOB").value;
+            var dob = new Date(dobInput);
+            var today = new Date();
+            var age = today.getFullYear() - dob.getFullYear();
+            var m = today.getMonth() - dob.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < dob.getDate()))
+            {
+                age--;
+            }
+            if(age <= 0)
+            {
+                document.getElementById("dobError").textContent = "Please enter a valid Date of Birth";
+                return false;
+            }
+            else
+            {
+                document.getElementById("dobError").textContent = "";
+                document.getElementById("Age").value = age;
+                return true;
+            }
+        }
+
+        function validateForm() {
+            var contactNumber = document.getElementById("Contact_Number").value;
+            if (contactNumber.length !== 10 || isNaN(contactNumber)) {
+                document.getElementById("contactError").textContent = "Please enter a valid 10-digit contact number";
+                return false;
+            } else {
+                document.getElementById("contactError").textContent = "";
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
+7

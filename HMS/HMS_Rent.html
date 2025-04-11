@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="HMS.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hostel Management System</h1>
+        <div class="form-container">
+            <h2>Rent Details</h2>
+            <form method="post" action="HMS_Rent.php">
+                <div class="form-group">
+                    <label for="Plan">Plan:</label>
+                    <select id="Plan" name="Plan" required>
+                        <option value="">-- Select Plan --</option>
+                        <option value="Annually">Annually</option>
+                        <option value="Half-Yearly">Half-Yearly</option>
+                        <option value="Quarterly">Quarterly</option>
+                        <option value="Monthly">Monthly</option>
+                    </select>
+
+                    <label for="Amount">Amount:</label>
+                    <input type="number" id="Amount" name="Amount" required readonly>
+
+                    <label for="Payment_Date">Payment Date:</label>
+                    <input type="date" id="Payment_Date" name="Payment_Date" required>
+
+                    <label for="Payment_Mode">Payment Mode:</label>
+                    <select id="Payment_Mode" name="Payment_Mode" required>
+                        <option value="">-- Select Mode --</option>
+                        <option value="Online">Online</option>
+                        <option value="Offline">Offline</option>
+                    </select>
+                </div>
+                <button type="button" onclick="window.open('HMS_Guardian.html', '_self');">Back</button>
+                <button type="submit">Next</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('Plan').addEventListener('change', function() {
+            var Plan = this.value;
+            var AmountInput = document.getElementById('Amount');
+            switch(Plan)
+            {
+                case 'Annually':
+                    AmountInput.value = '100000';
+                    break;
+                case 'Half-Yearly':
+                    AmountInput.value = '50000';
+                    break;
+                case 'Quarterly':
+                    AmountInput.value = '35000';
+                    break;
+                case 'Monthly':
+                    AmountInput.value = '10000';
+                    break;
+                default:
+                    AmountInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

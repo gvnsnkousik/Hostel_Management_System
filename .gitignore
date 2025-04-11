@@ -1,0 +1,48 @@
+# =========================
+# 📂 .gitignore for HMS Project
+# =========================
+
+# === PHP-related files ===
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+*.env
+.env.*
+
+# === System files (OS) ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# === IDE/Editor configs ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# === XAMPP-specific ===
+xampp-control.ini
+xampp-control.log
+htdocs/
+mysql/
+
+# === Node/npm (if ever used) ===
+node_modules/
+
+# === Composer (if ever used) ===
+vendor/
+
+# === Backup / temp files ===
+*.bak
+*.tmp
+*.temp
+*.old
+
+# === Git-specific ===
+.gitkeep
+
+# === Uploads or runtime data (if any) ===
+uploads/
